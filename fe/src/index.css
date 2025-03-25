@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+/* .scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+} */
+
+
+/* body {
+  overflow-x: hidden;
+} */
+
+/* *{
+  background-color: black;
+} */
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+/* 
+@tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  /* Adjust as needed */
+  
+  background: black;
+  z-index: 50; /* Ensure it's above other content */
+}
+
+.main-content {
+  margin-left: 250px; /* Same width as sidebar */
+  width: calc(100% - 250px); /* Prevents content from going behind */
+}
+
+
+/* Optional Glow Effect for the Cards */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+  }
+}
+
+.glow-effect:hover {
+  animation: glow 1s infinite alternate;
+}
+
+html, body {
+  overflow-x: hidden !important;
+  width: 100%;
+}
+
+/* * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+} */
